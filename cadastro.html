@@ -21,6 +21,36 @@
             </nav>
         </div>
     </header>
+
+    <main class="conteudo-principal">
+        <section class="formulario-cadastro">
+            <div class="container">
+                <h2>Cadastrar Necessidade</h2>
+                <p>Preencha o formulário abaixo para cadastrar as necessidades da sua instituição.</p>
+
+                <form id="formsNecessidade" class="formulario">
+                    <div class="grupo-formulario">
+                        <label for="nomeInstituição">Nome da Instituição</label>
+                        <input type="text" id="nomeInstituição" name="nomeInstituição" required>
+                    </div>
+
+                    <div class="grupo-formulario">
+                        <label for="tipoAjuda">Tipo de Ajuda</label>
+                        <select id="tipoAjuda" name="tipoAjuda" required>
+                        <option value="">Selecione uma Opção</option>
+                        <option value="Educação">Educação</option>
+                        <option value="Saúde">Saúde</option>
+                        <option value="Meio Ambiente">Meio Ambiente</option>
+                        <option value="Doação de Alimentos">Doação de Alimentos</option>
+                        <option value="Doação de Roupas">Doação de Roupas</option>
+                        <option value="Outros">Outros</option>
+                </select>
+            </div>
+            
+    
+            </div>
+        </section>
+    </main>
     
 </body>
 </html>
