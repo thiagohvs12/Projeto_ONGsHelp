@@ -165,3 +165,55 @@ botao
 .formulario-cadastro p {
     margin-bottom: 2rem;
 }
+.grupo-formulario {
+    margin-bottom: 1.5rem;
+}
+
+.grupo-formulario label {
+    display: block;
+    margin-bottom: 0.5rem;
+    font-weight: bold;
+}
+
+.grupo-formulario input,
+.grupo-formulario select,
+.grupo-formulario textarea {
+    width: 100%;
+    padding: 0.8rem;
+    border: 1px solid var(--cor-borda);
+    border-radius: var(--borda-arredondada);
+    font-family: inherit;
+}
+
+.grupo-formulario textarea {
+    min-height: 120px;
+    resize: vertical;
+}
+
+/* Lista de Necessidades */
+.lista-necessidades h2 {
+    margin-bottom: 1rem;
+    color: var(--cor-primaria);
+}
+
+.lista-necessidades p {
+    margin-bottom: 2rem;
+}
+
+.filtros {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    margin-bottom: 2rem;
+}
+
+.grupo-filtro {
+    flex: 1;
+    min-width: 200px;
+}
+
+.grupo-filtro label {
+    display: block;
+    margin-bottom: 0.5rem;
+    font-weight: bold;
+}
