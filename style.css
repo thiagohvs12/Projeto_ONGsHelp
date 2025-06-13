@@ -110,11 +110,11 @@ body {
     color: var(--cor-texto-claro);
     border: 2px solid var(--cor-texto-claro);
 }
-.botao-secundario:hover {
+.-secundario:hover {
     background-color: var(--cor-texto-claro);
     color: var(--cor-secundaria);
 }
-
+botao
 /* Seção Como Funciona */
 .como-funciona {
     padding: 2rem 0;
