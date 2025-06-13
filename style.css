@@ -132,3 +132,36 @@ botao
     flex-wrap: wrap;
     gap: 1rem;
 }
+.passo {
+    flex: 1;
+    min-width: 250px;
+    background-color: var(--cor-texto-claro);
+    padding: 1.5rem;
+    border-radius: var(--borda-arredondada);
+    box-shadow: var(--sombra);
+    margin-bottom: 1rem;
+}
+
+.passo h3 {
+    color: var(--cor-secundaria);
+    margin-bottom: 0.5rem;
+}
+
+/* Formulário */
+.formulario-cadastro {
+    background-color: var(--cor-texto-claro);
+    padding: 2rem;
+    border-radius: var(--borda-arredondada);
+    box-shadow: var(--sombra);
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.formulario-cadastro h2 {
+    margin-bottom: 1rem;
+    color: var(--cor-primaria);
+}
+
+.formulario-cadastro p {
+    margin-bottom: 2rem;
+}
