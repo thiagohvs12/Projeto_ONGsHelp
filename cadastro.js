@@ -20,3 +20,50 @@ document.addEventListener('DOMContentLoaded', function() {
     // Integração com ViaCEP
     campoCep.addEventListener('blur', function() {
         const cep = this.value.replace(/\D/g, '');
+
+        if (cep.length === 8) {
+            buscarEnderecoPorCEP(cep);
+        }
+    });
+    
+    // Validação e envio do formulário
+    formNecessidade.addEventListener('submit', function(e) {
+        e.preventDefault();
+        
+        if (validarFormulario()) {
+            salvarNecessidade();
+            formNecessidade.reset();
+            exibirMensagem('Necessidade cadastrada com sucesso!', 'sucesso');
+        }
+    });
+    function buscarEnderecoPorCEP(cep) {
+        fetch(`https://viacep.com.br/ws/${cep}/json/`)
+            .then(response => response.json())
+            .then(data => {
+                if (!data.erro) {
+                    document.getElementById('rua').value = data.logradouro || '';
+                    document.getElementById('bairro').value = data.bairro || '';
+                    document.getElementById('cidade').value = data.localidade || '';
+                    document.getElementById('estado').value = data.uf || '';
+                } else {
+                    exibirMensagem('CEP não encontrado', 'erro');
+                }
+                .catch(error => {
+                    console.error('Erro ao buscar CEP:', error);
+                    exibirMensagem('Erro ao buscar CEP. Tente novamente.', 'erro');
+                });
+        }
+        
+        /**
+         * Valida todos os campos do formulário
+         * @returns {boolean} True se todos os campos são válidos, False caso contrário
+         */
+        function validarFormulario() {
+            let valido = true;
+            const camposObrigatorios = formNecessidade.querySelectorAll('[required]');
+            
+            camposObrigatorios.forEach(campo => {
+                if (!campo.value.trim()) {
+                    campo.style.borderColor = '#e74c3c';
+                    valido = false;
+            })
