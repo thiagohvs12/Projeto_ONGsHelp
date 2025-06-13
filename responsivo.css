@@ -1,0 +1,34 @@
+/* Estilos responsivos para telas menores */
+
+@media (max-width: 768px) {
+    .menu-principal ul {
+        flex-direction: column;
+        gap: 0.5rem;
+    }
+    
+    .menu-principal a {
+        display: block;
+        text-align: center;
+    }
+    
+    .botoes-acao {
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .passos {
+        flex-direction: column;
+    }
+    
+    .filtros {
+        flex-direction: column;
+    }
+    
+    .grupo-filtro {
+        width: 100%;
+    }
+    
+    .formulario-cadastro {
+        padding: 1rem;
+    }
+}
