@@ -121,4 +121,21 @@ function salvarNecessidade() {
  const novaNecessidade = {
      id: id,
      nomeInstituicao: document.getElementById('nomeInstituicao').value,
-     
+     tipoAjuda: document.getElementById('tipoAjuda').value,
+            tituloNecessidade: document.getElementById('tituloNecessidade').value,
+            descricaoNecessidade: document.getElementById('descricaoNecessidade').value,
+            cep: document.getElementById('cep').value,
+            rua: document.getElementById('rua').value,
+            bairro: document.getElementById('bairro').value,
+            cidade: document.getElementById('cidade').value,
+            estado: document.getElementById('estado').value,
+            contato: document.getElementById('contato').value,
+            dataCadastro: new Date().toISOString()
+        };
+        
+        // Adicionar a nova necessidade ao array
+        necessidades.push(novaNecessidade);
+        
+        // Salvar no localStorage
+        localStorage.setItem('necessidades', JSON.stringify(necessidades));
+    }
