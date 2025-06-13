@@ -110,3 +110,25 @@ body {
     color: var(--cor-texto-claro);
     border: 2px solid var(--cor-texto-claro);
 }
+.botao-secundario:hover {
+    background-color: var(--cor-texto-claro);
+    color: var(--cor-secundaria);
+}
+
+/* Seção Como Funciona */
+.como-funciona {
+    padding: 2rem 0;
+    text-align: center;
+}
+
+.como-funciona h2 {
+    margin-bottom: 2rem;
+    font-size: 1.8rem;
+}
+
+.passos {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
