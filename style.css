@@ -267,3 +267,22 @@ botao
     margin-bottom: 1rem;
     color: #666;
 }
+.card-necessidade .local {
+    font-size: 0.9rem;
+    color: #777;
+    margin-bottom: 0.5rem;
+}
+
+.card-necessidade .contato {
+    font-size: 0.9rem;
+    color: var(--cor-terciaria);
+}
+
+/* Rodapé */
+.rodape {
+    background-color: var(--cor-primaria);
+    color: var(--cor-texto-claro);
+    text-align: center;
+    padding: var(--espacamento) 0;
+    margin-top: 2rem;
+}
