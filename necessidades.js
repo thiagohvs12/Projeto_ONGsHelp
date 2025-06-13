@@ -25,3 +25,20 @@ document.addEventListener('DOMContentLoaded', function() {
         // Exibir as necessidades
         exibirNecessidades(necessidades);
     }
+    function criarCardNecessidade(necessidade) {
+        const card = document.createElement('div');
+        card.className = 'card-necessidade';
+        
+        // Formatar a data para exibição
+        const dataCadastro = new Date(necessidade.dataCadastro);
+        const dataFormatada = formatarData(dataCadastro);
+        
+        // Criar o conteúdo do card
+        card.innerHTML = `
+            <h3>${necessidade.tituloNecessidade}</h3>
+            <div class="instituicao">${necessidade.nomeInstituicao}</div>
+            <div class="tipo">${necessidade.tipoAjuda}</div>
+            <div class="descricao">${necessidade.descricaoNecessidade}</div>
+            <div class="local">
+                <strong>Local:</strong> ${necessidade.rua}, ${necessidade.bairro} - ${necessidade.cidade}/${necessidade.estado}
+            </div>
