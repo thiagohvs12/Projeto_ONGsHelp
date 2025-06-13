@@ -42,3 +42,23 @@ document.addEventListener('DOMContentLoaded', function() {
             <div class="local">
                 <strong>Local:</strong> ${necessidade.rua}, ${necessidade.bairro} - ${necessidade.cidade}/${necessidade.estado}
             </div>
+            <div class="contato">
+            <strong>Contato:</strong> ${necessidade.contato}
+        </div>
+        <div class="data">
+            <small>Cadastrado em: ${dataFormatada}</small>
+        </div>
+    `;
+    
+    return card;
+}
+
+/**
+ * Filtra as necessidades com base nos critérios de busca
+ */
+function filtrarNecessidades() {
+    const termoBusca = campoBusca.value.toLowerCase();
+    const tipoSelecionado = filtroTipo.value;
+    
+    // Obter todas as necessidades
+    const todasNecessidades = JSON.parse(localStorage.getItem('necessidades')) || [];
