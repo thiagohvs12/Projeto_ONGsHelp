@@ -1,0 +1,24 @@
+/* Reset e estilos base */
+:root {
+    --cor-primaria: #2c3e50;
+    --cor-secundaria: #3498db;
+    --cor-terciaria: #e74c3c;
+    --cor-texto: #333;
+    --cor-texto-claro: #fff;
+    --cor-fundo: #f9f9f9;
+    --cor-borda: #ddd;
+    --sombra: 0 2px 5px rgba(0,0,0,0.1);
+    --borda-arredondada: 4px;
+    --espacamento: 1rem;
+}
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.6;
+    color: var(--cor-texto);
+    background-color: var(--cor-fundo);
+}
