@@ -1,10 +1,10 @@
 :root {
     --cor-primaria: #2c3e50;
-    --cor-secundaria: #3498db;
+    --cor-secundaria: #f1f1f1;
     --cor-terciaria: #e74c3c;
     --cor-texto: #fafafa;
-    --cor-texto-claro: #cecdc9;
-    --cor-fundo: rgb(97, 139, 238);
+    --cor-texto-claro: #306be0;
+    --cor-fundo: rgb(157, 180, 234);
     --cor-borda: #ddd;
     --sombra: 0 2px 5px rgba(0,0,0,0.1);
     --borda-arredondada: 4px;
@@ -41,4 +41,34 @@ body {
 .logo {
     font-size: 1.8rem;
     margin-bottom: var(--espacamento);
+}
+
+.menu-principal ul {
+    display: flex;
+    list-style: none;
+}
+
+.menu-principal a {
+    color: var(--cor-texto-claro);
+    text-decoration: none;
+    padding: 0.5rem 1rem;
+    border-radius: var(--borda-arredondada);
+    transition: background-color 0.3s;
+}
+
+.menu-principal a:hover, .menu-principal a.ativo {
+    background-color: var(--cor-secundaria);
+}
+
+/* Conteúdo principal */
+.conteudo-principal {
+    padding: 2rem 0;
+}
+
+.hero {
+    background-color: var(--cor-secundaria);
+    color: var(--cor-texto-claro);
+    padding: 3rem 0;
+    text-align: center;
+    margin-bottom: 2rem;
 }
