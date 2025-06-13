@@ -1,21 +1,21 @@
 <!DOCTYPE html>
-<html>
+<html lang="pt-BR">
 <head>
-    <meta charset='utf-8'>
-    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
-    <title>Cadastrar Necessidade - Conecta Voluntários</title>
-    <meta name='viewport' content='width=device-width, initial-scale=1'>
-    <link rel='stylesheet' type='text/css' media='screen' href='style.css' href='responsivo.css'>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cadastrar Necessidade - ConectaVoluntários</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="responsivo.css">
 </head>
 <body>
-    <header class="cabeçalho">
+    <header class="cabecalho">
         <div class="container">
             <h1 class="logo">ConectaVoluntários</h1>
             <nav class="menu-principal">
                 <ul>
                     <li><a href="index.html">Home</a></li>
                     <li><a href="cadastro.html" class="ativo">Cadastrar Necessidade</a></li>
-                    <li><a href="necessidade.hml">Ver Necesisidade</a></li>
+                    <li><a href="necessidades.html">Ver Necessidades</a></li>
                 </ul>
             </nav>
         </div>
@@ -26,82 +26,80 @@
             <div class="container">
                 <h2>Cadastrar Necessidade</h2>
                 <p>Preencha o formulário abaixo para cadastrar as necessidades da sua instituição.</p>
-
-                <form id="formsNecessidade" class="formulario">
+                
+                <form id="formNecessidade" class="formulario">
                     <div class="grupo-formulario">
-                        <label for="nomeInstituição">Nome da Instituição</label>
-                        <input type="text" id="nomeInstituição" name="nomeInstituição" required>
+                        <label for="nomeInstituicao">Nome da Instituição*</label>
+                        <input type="text" id="nomeInstituicao" name="nomeInstituicao" required>
                     </div>
-
+                    
                     <div class="grupo-formulario">
-                        <label for="tipoAjuda">Tipo de Ajuda</label>
+                        <label for="tipoAjuda">Tipo de Ajuda*</label>
                         <select id="tipoAjuda" name="tipoAjuda" required>
-                        <option value="">Selecione uma Opção</option>
-                        <option value="Educação">Educação</option>
-                        <option value="Saúde">Saúde</option>
-                        <option value="Meio Ambiente">Meio Ambiente</option>
-                        <option value="Doação de Alimentos">Doação de Alimentos</option>
-                        <option value="Doação de Roupas">Doação de Roupas</option>
-                        <option value="Outros">Outros</option>
-                </select>
-            </div>
-
-            <div class="grupo-formulario">
-                <label for="tituloNecessidade">Título da Necessidade*</label>
-                <input type="text" id="tituloNecessidade" name="tituloNecessidade" required>
-            </div>
-            
-            <div class="grupo-formulario">
-                <label for="descricaoNecessidade">Descrição Detalhada*</label>
-                <textarea id="descricaoNecessidade" name="descricaoNecessidade" rows="5" required></textarea>
-            </div>
-
-            <div class="grupo-formulario">
-                <label for="cep">CEP*</label>
-                <input type="text" id="cep" name="cep" required maxlength="9" 
-                       pattern="\d{5}-\d{3}" placeholder="00000-000">
-                <small>Digite o CEP para preencher automaticamente o endereço</small>
-            </div>
-            
-            <div class="grupo-formulario">
-                <label for="rua">Rua*</label>
-                <input type="text" id="rua" name="rua" required>
-            </div>
-            <div class="grupo-formulario">
-                <label for="bairro">Bairro*</label>
-                <input type="text" id="bairro" name="bairro" required>
-            </div>
-            
-            <div class="grupo-formulario">
-                <label for="cidade">Cidade*</label>
-                <input type="text" id="cidade" name="cidade" required>
-            </div>
-            
-            <div class="grupo-formulario">
-                <label for="estado">Estado*</label>
-                <input type="text" id="estado" name="estado" required>
-            </div>
-
-            <div class="grupo-formulario">
-                <label for="contato">Contato (E-mail ou Telefone)*</label>
-                <input type="text" id="contato" name="contato" required>
-            </div>
-            
-            <button type="submit" class="botao">Cadastrar Necessidade</button>
-        </form>
-    </div>
-</section>
-</main>
-
-<footer class="rodape">
-<div class="container">
-    <p>&copy; 2025 ConectaVoluntários. Todos os direitos reservados.</p>
-</div>
-</footer>
-
-<script src="js/cadastro.js"></script>
+                            <option value="">Selecione uma opção</option>
+                            <option value="Educação">Educação</option>
+                            <option value="Saúde">Saúde</option>
+                            <option value="Meio Ambiente">Meio Ambiente</option>
+                            <option value="Doação de Alimentos">Doação de Alimentos</option>
+                            <option value="Doação de Roupas">Doação de Roupas</option>
+                            <option value="Outros">Outros</option>
+                        </select>
+                    </div>
+                    
+                    <div class="grupo-formulario">
+                        <label for="tituloNecessidade">Título da Necessidade*</label>
+                        <input type="text" id="tituloNecessidade" name="tituloNecessidade" required>
+                    </div>
+                    
+                    <div class="grupo-formulario">
+                        <label for="descricaoNecessidade">Descrição Detalhada*</label>
+                        <textarea id="descricaoNecessidade" name="descricaoNecessidade" rows="5" required></textarea>
+                    </div>
+                    
+                    <div class="grupo-formulario">
+                        <label for="cep">CEP*</label>
+                        <input type="text" id="cep" name="cep" required maxlength="9" 
+                               pattern="\d{5}-\d{3}" placeholder="00000-000">
+                        <small>Digite o CEP para preencher automaticamente o endereço</small>
+                    </div>
+                    
+                    <div class="grupo-formulario">
+                        <label for="rua">Rua*</label>
+                        <input type="text" id="rua" name="rua" required>
+                    </div>
+                    
+                    <div class="grupo-formulario">
+                        <label for="bairro">Bairro*</label>
+                        <input type="text" id="bairro" name="bairro" required>
+                    </div>
+                    
+                    <div class="grupo-formulario">
+                        <label for="cidade">Cidade*</label>
+                        <input type="text" id="cidade" name="cidade" required>
+                    </div>
+                    
+                    <div class="grupo-formulario">
+                        <label for="estado">Estado*</label>
+                        <input type="text" id="estado" name="estado" required>
+                    </div>
+                    
+                    <div class="grupo-formulario">
+                        <label for="contato">Contato (E-mail ou Telefone)*</label>
+                        <input type="text" id="contato" name="contato" required>
+                    </div>
+                    
+                    <button type="submit" class="botao">Cadastrar Necessidade</button>
+                </form>
             </div>
         </section>
-    </main> 
+    </main>
+
+    <footer class="rodape">
+        <div class="container">
+            <p>&copy; 2023 ConectaVoluntários. Todos os direitos reservados.</p>
+        </div>
+    </footer>
+
+    <script src="cadastro.js"></script>
 </body>
 </html>
