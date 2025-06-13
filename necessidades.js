@@ -62,3 +62,23 @@ function filtrarNecessidades() {
     
     // Obter todas as necessidades
     const todasNecessidades = JSON.parse(localStorage.getItem('necessidades')) || [];
+    // Filtrar as necessidades
+    const necessidadesFiltradas = todasNecessidades.filter(necessidade => {
+        // Verificar o filtro por tipo
+        if (tipoSelecionado !== 'todos' && necessidade.tipoAjuda !== tipoSelecionado) {
+            return false;
+        }
+        
+        // Verificar a busca por termo
+        if (termoBusca) {
+            const textoBusca = `${necessidade.tituloNecessidade} ${necessidade.descricaoNecessidade}`.toLowerCase();
+            return textoBusca.includes(termoBusca);
+        }
+        
+        return true;
+    });
+    
+    // Exibir as necessidades filtradas
+    exibirNecessidades(necessidadesFiltradas);
+}
+});
