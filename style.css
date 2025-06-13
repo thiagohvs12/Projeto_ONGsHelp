@@ -3,7 +3,7 @@
     --cor-secundaria: #3498db;
     --cor-terciaria: #e74c3c;
     --cor-texto: #fafafa;
-    --cor-texto-claro: #fff;
+    --cor-texto-claro: #cecdc9;
     --cor-fundo: rgb(97, 139, 238);
     --cor-borda: #ddd;
     --sombra: 0 2px 5px rgba(0,0,0,0.1);
@@ -22,4 +22,23 @@ body {
     line-height: 1.6;
     color: var(--cor-texto);
     background-color: var(--cor-fundo);
+}
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 var(--espacamento);
+}
+
+/* Cabeçalho */
+.cabecalho {
+    background-color: var(--cor-primaria);
+    color: var(--cor-texto-claro);
+    padding: var(--espacamento) 0;
+    box-shadow: var(--sombra);
+}
+
+.logo {
+    font-size: 1.8rem;
+    margin-bottom: var(--espacamento);
 }
