@@ -101,3 +101,24 @@ document.addEventListener('DOMContentLoaded', function() {
 function validarContato(contato) {
     // Expressão regular para e-mail
     const regexEmail = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+ // Expressão regular para telefone (com DDD, 10 ou 11 dígitos)
+ const regexTelefone = /^\(?\d{2}\)?[\s-]?\d{4,5}[\s-]?\d{4}$/;
+        
+ return regexEmail.test(contato) || regexTelefone.test(contato);
+}
+
+/**
+* Salva a necessidade no localStorage
+*/
+function salvarNecessidade() {
+ // Obter as necessidades existentes
+ const necessidades = JSON.parse(localStorage.getItem('necessidades')) || [];
+ 
+ // Criar um ID único para a necessidade
+ const id = Date.now().toString();
+ 
+ // Criar o objeto da nova necessidade
+ const novaNecessidade = {
+     id: id,
+     nomeInstituicao: document.getElementById('nomeInstituicao').value,
+     
