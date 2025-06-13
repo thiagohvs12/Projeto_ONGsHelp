@@ -25,4 +25,20 @@ function formatarData(data) {
     const mes = String(data.getMonth() + 1).padStart(2, '0');
     const ano = data.getFullYear();
     return `${dia}/${mes}/${ano}`;
-}
+}/**
+ * Função para exibir mensagens de feedback para o usuário
+ * @param {string} mensagem - Texto da mensagem
+ * @param {string} tipo - Tipo da mensagem (sucesso, erro, aviso)
+ * @param {HTMLElement} container - Elemento onde a mensagem será exibida
+ */
+function exibirMensagem(mensagem, tipo = 'sucesso', container = document.body) {
+    const divMensagem = document.createElement('div');
+    divMensagem.className = `mensagem mensagem-${tipo}`;
+    divMensagem.textContent = mensagem;
+    
+    // Estilos inline para a mensagem (poderia estar no CSS também)
+    divMensagem.style.position = 'fixed';
+    divMensagem.style.top = '20px';
+    divMensagem.style.right = '20px';
+    divMensagem.style.padding = '15px';
+    divMensagem.style.borderRadius = '4px';
