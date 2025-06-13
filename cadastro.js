@@ -82,3 +82,22 @@ document.addEventListener('DOMContentLoaded', function() {
                     valido = false;
                 }
             }
+            if (campo.id === 'cep' && campo.value.replace(/\D/g, '').length !== 8) {
+                exibirMensagem('CEP deve ter 8 dígitos', 'erro');
+                campo.style.borderColor = '#e74c3c';
+                valido = false;
+            }
+        }
+    });
+    
+    return valido;
+}
+
+/**
+ * Valida se o contato é um e-mail ou telefone válido
+ * @param {string} contato - Valor do campo de contato
+ * @returns {boolean} True se for válido, False caso contrário
+ */
+function validarContato(contato) {
+    // Expressão regular para e-mail
+    const regexEmail = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
