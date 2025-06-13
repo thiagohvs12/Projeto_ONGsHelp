@@ -42,3 +42,23 @@ function exibirMensagem(mensagem, tipo = 'sucesso', container = document.body) {
     divMensagem.style.right = '20px';
     divMensagem.style.padding = '15px';
     divMensagem.style.borderRadius = '4px';
+    divMensagem.style.color = 'white';
+    divMensagem.style.zIndex = '1000';
+    divMensagem.style.boxShadow = '0 2px 10px rgba(0,0,0,0.2)';
+    
+    if (tipo === 'sucesso') {
+        divMensagem.style.backgroundColor = '#27ae60';
+    } else if (tipo === 'erro') {
+        divMensagem.style.backgroundColor = '#e74c3c';
+    } else {
+        divMensagem.style.backgroundColor = '#f39c12';
+    }
+    container.appendChild(divMensagem);
+    
+    // Remover a mensagem após 5 segundos
+    setTimeout(() => {
+        divMensagem.style.opacity = '0';
+        divMensagem.style.transition = 'opacity 0.5s';
+        setTimeout(() => divMensagem.remove(), 500);
+    }, 5000);
+}
