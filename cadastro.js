@@ -54,10 +54,10 @@ document.addEventListener('DOMContentLoaded', function() {
                 });
         }
         
-        /**
-         * Valida todos os campos do formulário
-         * @returns {boolean} True se todos os campos são válidos, False caso contrário
-         */
+        
+         //Valida todos os campos do formulário
+         // @returns {boolean} True se todos os campos são válidos, False caso contrário
+        
         function validarFormulario() {
             let valido = true;
             const camposObrigatorios = formNecessidade.querySelectorAll('[required]');
@@ -67,3 +67,18 @@ document.addEventListener('DOMContentLoaded', function() {
                     campo.style.borderColor = '#e74c3c';
                     valido = false;
             })
+            // Adiciona um evento para remover o destaque quando o campo for preenchido
+            campo.addEventListener('input', function() {
+                if (this.value.trim()) {
+                    this.style.borderColor = '';
+                }
+            });
+        } else {
+            // Validações específicas para alguns campos
+            if (campo.id === 'contato') {
+                if (!validarContato(campo.value)) {
+                    exibirMensagem('Informe um e-mail ou telefone válido', 'erro');
+                    campo.style.borderColor = '#e74c3c';
+                    valido = false;
+                }
+            }
