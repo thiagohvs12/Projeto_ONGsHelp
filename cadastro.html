@@ -46,7 +46,7 @@
                         <option value="Outros">Outros</option>
                 </select>
             </div>
-            
+
             <div class="grupo-formulario">
                 <label for="tituloNecessidade">Título da Necessidade*</label>
                 <input type="text" id="tituloNecessidade" name="tituloNecessidade" required>
@@ -57,7 +57,18 @@
                 <textarea id="descricaoNecessidade" name="descricaoNecessidade" rows="5" required></textarea>
             </div>
 
-    
+            <div class="grupo-formulario">
+                <label for="cep">CEP*</label>
+                <input type="text" id="cep" name="cep" required maxlength="9" 
+                       pattern="\d{5}-\d{3}" placeholder="00000-000">
+                <small>Digite o CEP para preencher automaticamente o endereço</small>
+            </div>
+            
+            <div class="grupo-formulario">
+                <label for="rua">Rua*</label>
+                <input type="text" id="rua" name="rua" required>
+            </div>
+
             </div>
         </section>
     </main>
