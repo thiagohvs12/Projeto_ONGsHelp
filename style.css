@@ -72,3 +72,41 @@ body {
     text-align: center;
     margin-bottom: 2rem;
 }
+.hero h2 {
+    font-size: 2.2rem;
+    margin-bottom: 1rem;
+}
+
+.hero p {
+    font-size: 1.2rem;
+    margin-bottom: 2rem;
+}
+
+.botoes-acao {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+}
+
+.botao {
+    display: inline-block;
+    background-color: var(--cor-texto-claro);
+    color: var(--cor-primaria);
+    padding: 0.8rem 1.5rem;
+    border-radius: var(--borda-arredondada);
+    text-decoration: none;
+    font-weight: bold;
+    transition: all 0.3s;
+}
+
+.botao:hover {
+    background-color: var(--cor-primaria);
+    color: var(--cor-texto-claro);
+    transform: translateY(-2px);
+}
+
+.botao-secundario {
+    background-color: transparent;
+    color: var(--cor-texto-claro);
+    border: 2px solid var(--cor-texto-claro);
+}
