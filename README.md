@@ -34,3 +34,15 @@ Plataforma web para conectar ONGs com voluntários de forma eficiente e organiza
     --espacamento: 1rem;
 }
 
+## 📂 Estrutura de Arquivos
+📦 plataforma-voluntarios
+├── 📂 css/
+│   ├── style.css         # Estilos principais
+│   └── responsivo.css    # Media queries
+├── 📂 js/
+│   ├── main.js           # Funções globais
+│   ├── cadastro.js       # Lógica do formulário
+│   └── necessidades.js   # Exibição das oportunidades
+├── index.html            # Página inicial
+├── cadastro.html         # Cadastro de necessidades
+└── necessidades.html     # Visualização de oportunidades
