@@ -34,30 +34,16 @@ Plataforma web para conectar ONGs com voluntários de forma eficiente e organiza
 
 
 ## 🔍 Funcionalidades
+
 ### 📋 Cadastro
+-Validação de campos
+-Autocompletar endereço via CEP
+-Armazenamento local
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+## 🔎 Visualização
+-Filtros por tipo e busca 
+-Cards responsivos
+-Ordenação por data
 
 
 
